@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Inarich Store - Aesthetic Edition</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Mali:wght@400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: {
+      serif: ['Cormorant Garamond', 'Noto Sans Thai', 'serif'],
+      cute: ['Mali', 'Noto Sans Thai', 'sans-serif'],
+      sans: ['Noto Sans Thai', 'sans-serif']
+    }
+  } }
+}
+</script>
+<style>
+:root { color-scheme: light; }
+body {
+  background-color: #fcf9f5;
+  background-image: radial-gradient(circle at 50% 15%, #ffffff 0%, #fcf6f0 55%, #f4eae1 100%);
+  background-attachment: fixed;
+  color: #4a3b32;
+  font-family: 'Noto Sans Thai', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.princess-panel {
+  position: relative;
+  background: rgba(255,255,255,0.95);
+  border: 1.5px solid #ebdcd5;
+  box-shadow: 0 12px 35px rgba(74,59,50,0.06);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+.princess-panel::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed #f2cbdb;
+  border-radius: 1.2rem;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.princess-btn {
+  background: #e07a99;
+  border: 1px solid #c96382;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(224,122,153,0.3);
+  transition: all 0.2s ease;
+  border-radius: 9999px;
+  font-family: 'Cormorant Garamond', 'Noto Sans Thai', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.princess-btn:hover { background: #d46a84; border-color: #b55270; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,106,132,0.4); }
+.princess-btn:active { transform: translateY(1px); }
+.princess-hud-bar {
+  background: rgba(255,255,255,0.9);
+  border: 1.5px solid #ebdcd5;
+  box-shadow: 0 4px 12px rgba(74,59,50,0.04);
+  border-radius: 9999px;
+  font-family: 'Cormorant Garamond', 'Noto Sans Thai', serif;
+  backdrop-filter: blur(8px);
+}
+.editorial-divider { height: 1px; width: 100%; background: #f0e1dc; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fcf6f0; }
+::-webkit-scrollbar-thumb { background: #e07a99; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #d46a84; }
+</style>
+</head>
+<body class="py-6 px-3 sm:py-10 sm:px-6">
+
+<!-- TOP BAR -->
+<div class="max-w-xl mx-auto mb-5 sm:mb-6 grid grid-cols-3 items-center px-4 py-2 princess-hud-bar text-[#4a3b32] text-xs">
+  <span class="flex items-center gap-1.5 text-[#d46a84] font-semibold justify-self-start font-serif tracking-widest text-sm"><i class="fa-solid fa-heart text-xs"></i>LOUNGE &amp; CO.</span>
+  <span class="tracking-widest font-semibold text-[#4a3b32] text-center justify-self-center whitespace-nowrap font-serif italic text-sm">~ Inarich Store ~</span>
+  <span class="flex items-center gap-1 text-[#8c7872] justify-self-end font-serif tracking-wider">EST. 2026</span>
+</div>
+
+<div class="w-full max-w-xl mx-auto space-y-5 sm:space-y-6 relative z-10">
+
+<!-- SECTION 1: Shop Header -->
+<div class="princess-panel p-5 sm:p-6 relative overflow-hidden">
+  <div class="absolute -top-1 left-1/2 -translate-x-1/2 pointer-events-none opacity-80" aria-hidden="true">
+    <svg width="44" height="22" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 10 L10 20 L16 18 L21 21 L23 12 Z" fill="#d46a84"/>
+      <path d="M28 10 L38 20 L32 18 L27 21 L25 12 Z" fill="#d46a84"/>
+      <path d="M22 8 C14 1 4 3 6 11 C8 15 15 14 22 10 Z" fill="#e07a99"/>
+      <path d="M26 8 C34 1 44 3 42 11 C40 15 33 14 26 10 Z" fill="#e07a99"/>
+      <rect x="21" y="6" width="6" height="8" rx="2" fill="#b55270"/>
+    </svg>
+  </div>
+  <div class="absolute top-4 left-4 text-[10px] text-[#8c7872] font-serif italic tracking-wider">sweet dreams</div>
+  <div class="absolute top-4 right-4 text-[10px] text-[#8c7872] font-serif italic tracking-wider">slow mornings</div>
+
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 relative z-10 pt-3">
+    <div class="flex items-center space-x-3 sm:space-x-4 w-full">
+      <div class="relative group shrink-0 flex items-center justify-center p-1">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#fcecf2] border-2 border-[#e07a99] flex items-center justify-center shadow-sm relative overflow-hidden z-10">
+          <span class="text-[#4a3b32] text-sm sm:text-base font-bold font-serif tracking-wider">INARICH</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-pink-200/40 via-transparent to-transparent"></div>
+        </div>
+        <span class="absolute -bottom-1 -right-1 bg-[#d46a84] text-white border border-white text-[9px] px-1.5 py-0.5 rounded-full font-serif shadow-sm z-30">VIP</span>
+      </div>
+      <div class="min-w-0 flex-1">
+        <div class="flex items-center justify-between sm:justify-start space-x-2">
+          <h1 class="text-xl sm:text-2xl font-bold font-serif text-[#4a3b32] tracking-wide truncate">Inarich Pajamas &amp; Co. <i class="fa-solid fa-heart text-[#d46a84] text-xs ml-1"></i></h1>
+          <button onclick="toggleAdminModal(true)" class="sm:hidden princess-btn text-[10px] px-3 py-1.5 flex items-center space-x-1 shrink-0 font-serif">
+            <i class="fa-solid fa-sliders text-[10px]"></i><span>Admin</span>
+          </button>
+        </div>
+        <p id="shopDescriptionText" class="text-[11px] sm:text-xs text-[#8c7872] mt-0.5 font-medium font-serif italic truncate">"The ultimate me-time direct to your door"</p>
+        <div class="flex flex-wrap gap-1.5 mt-2">
+          <span id="shopStatusBadge" class="inline-flex items-center text-[9px] sm:text-[10px] bg-white text-[#4a3b32] border border-[#ebdcd5] px-2.5 py-0.5 rounded-full font-serif">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#d46a84] inline-block mr-1.5 animate-ping"></span>status: พร้อมต้อนรับคุณหนูค่ะ
+          </span>
+          <span id="shopTagsBadge" class="text-[9px] sm:text-[10px] bg-[#fcecf2] text-[#d46a84] border border-[#f2cbdb] px-2.5 py-0.5 rounded-full font-serif">loungewear / sleepy / cozy / aesthetic</span>
+        </div>
+        <div class="flex items-center space-x-2 mt-2.5 pt-2 border-t border-dashed border-[#ebdcd5]">
+          <span class="text-[10px] text-[#8c7872] font-serif italic">Contact :</span>
+          <div id="custContactContainer" class="flex flex-wrap items-center gap-1.5"></div>
+        </div>
+      </div>
+    </div>
+    <button onclick="toggleAdminModal(true)" class="hidden sm:flex princess-btn text-xs px-4 py-2 items-center space-x-1.5 shrink-0 font-serif">
+      <i class="fa-solid fa-sliders text-xs"></i>
+      <span>Admin System <i class="fa-solid fa-crown ml-1 text-pink-200"></i></span>
+    </button>
+  </div>
+</div>
+
+<!-- SECTION 2: Banner -->
+<div id="bannerContainer" class="princess-panel p-2.5 sm:p-3 relative overflow-hidden group">
+  <div class="w-full aspect-[1122/495] rounded-xl overflow-hidden border border-[#ebdcd5] relative bg-pink-50 shadow-inner group-hover:border-[#e07a99] transition duration-300">
+    <img id="shopBannerImg" src="" alt="Inarich Banner" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 ease-out opacity-95">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#4a3b32]/15 via-transparent to-transparent pointer-events-none"></div>
+  </div>
+</div>
+
+<!-- SECTION 3: Loyalty -->
+<div class="bg-white/95 border border-[#ebdcd5] p-4 rounded-2xl shadow-sm space-y-2 backdrop-blur-md">
+  <div class="flex items-center justify-between">
+    <span class="text-xs font-serif font-bold text-[#4a3b32] flex items-center gap-1.5">
+      <i class="fa-solid fa-id-card text-[#d46a84]"></i><span>ตรวจสอบบัตรสะสมแต้มของคุณหนู (Build your box)</span>
+    </span>
+    <span class="text-[10px] bg-[#fcecf2] border border-[#f2cbdb] px-2.5 py-0.5 rounded-full font-serif font-bold text-[#d46a84]">LOYALTY CLUB</span>
+  </div>
+  <form onsubmit="lookupCustomerOwnCard(event)" class="flex gap-2">
+    <div class="relative flex-1">
+      <i class="fa-solid fa-key absolute left-3 top-1/2 -translate-y-1/2 text-[#d46a84] text-xs"></i>
+      <input type="text" id="memberSearchInput" placeholder="กรอกรหัสบัตรสมาชิกของคุณ (เช่น INR-001)..." class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl pl-8 pr-3 py-2 text-xs text-[#4a3b32] focus:outline-none focus:ring-2 focus:ring-[#f2cbdb] font-serif font-medium">
+    </div>
+    <button type="submit" class="princess-btn px-4 py-2 text-xs font-serif font-bold shrink-0">เปิดบัตรของฉัน</button>
+  </form>
+</div>
+
+<div id="stampCardContainer" class="princess-panel p-4 sm:p-6 relative overflow-hidden space-y-5">
+  <div class="flex items-center justify-between gap-3 pb-3.5 border-b border-dashed border-[#ebdcd5] pt-1">
+    <div class="flex items-center gap-3 min-w-0">
+      <div id="cardAvatarDisplay" class="w-12 h-12 rounded-2xl bg-[#fcecf2] border border-[#f2cbdb] flex items-center justify-center text-[#d46a84] text-xl shrink-0 shadow-sm overflow-hidden"></div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <span id="cardCodeDisplay" class="text-[10px] font-serif font-bold bg-[#e07a99] text-white px-2 py-0.5 rounded-full">INR-001</span>
+          <span class="text-[10px] font-serif italic text-[#8c7872]">COZY MEMBER</span>
+        </div>
+        <h2 id="cardHolderNameDisplay" class="text-base sm:text-lg font-bold font-serif text-[#4a3b32] truncate mt-0.5">คุณหนูมิโอริ (Miori)</h2>
+        <div id="cardCustomerContactDisplay" class="flex items-center gap-1.5 text-[11px] font-serif text-[#d46a84] mt-0.5"></div>
+      </div>
+    </div>
+    <div class="text-right shrink-0">
+      <div class="text-[10px] font-serif italic text-[#8c7872]">Current Points</div>
+      <div class="text-xl sm:text-2xl font-bold font-serif text-[#4a3b32]">
+        <span id="currentPointsDisplay" class="text-[#d46a84]">7</span><span class="text-sm text-[#8c7872]"> / <span id="targetPointsDisplay">10</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-1.5">
+    <div class="flex justify-between text-[11px] font-serif font-medium">
+      <span id="progressStatusText" class="text-[#4a3b32]">อีก 3 แต้ม จะแลกของรางวัลได้แล้วค่ะ!</span>
+      <span id="progressPercentText" class="text-[#d46a84]">70%</span>
+    </div>
+    <div class="w-full h-3 bg-[#fcecf2] rounded-full border border-[#f2cbdb] overflow-hidden p-0.5">
+      <div id="pointsProgressBar" class="h-full bg-gradient-to-r from-[#e07a99] via-[#f28cb1] to-[#f4b6cc] rounded-full transition-all duration-500" style="width:70%"></div>
+    </div>
+  </div>
+
+  <div class="bg-white/90 border border-[#ebdcd5] rounded-2xl p-4 shadow-sm backdrop-blur-sm">
+    <div id="stampGridContainer" class="grid grid-cols-5 gap-2.5 sm:gap-3 justify-items-center"></div>
+  </div>
+
+  <div id="customerRedeemSection" class="pt-1">
+    <button id="redeemRewardBtn" onclick="redeemCustomerReward()" class="w-full princess-btn py-3 px-4 text-xs sm:text-sm font-serif font-bold flex items-center justify-center gap-2 disabled:opacity-50 disabled:pointer-events-none">
+      <i class="fa-solid fa-gift text-pink-100"></i><span id="redeemBtnText">สะสมให้ครบเพื่อแลกรางวัล</span>
+    </button>
+  </div>
+
+  <div class="pt-3 border-t border-dashed border-[#ebdcd5] space-y-2">
+    <div class="flex items-center justify-between">
+      <span class="text-xs font-serif font-bold text-[#4a3b32] flex items-center gap-1.5">
+        <i class="fa-solid fa-clock-rotate-left text-[#d46a84]"></i><span>ประวัติการสะสมแต้ม &amp; แลกรางวัลของคุณ</span>
+      </span>
+      <span id="historyCountBadge" class="text-[10px] bg-[#fcecf2] border border-[#f2cbdb] px-2 py-0.5 rounded-full font-serif font-bold text-[#d46a84]">0 รายการ</span>
+    </div>
+    <div id="cardHistoryList" class="bg-white/90 border border-[#ebdcd5] rounded-xl p-2.5 max-h-40 overflow-y-auto space-y-1.5"></div>
+  </div>
+</div>
+
+<div class="princess-panel p-4 sm:p-5 relative overflow-hidden space-y-3">
+  <div class="flex items-center justify-between gap-2">
+    <span class="inline-flex items-center gap-1.5 bg-[#e07a99] text-white px-3 py-1 rounded-full text-xs font-serif font-bold tracking-wide">
+      <i class="fa-solid fa-gift text-pink-100"></i><span>ของรางวัลเมื่อสะสมครบ <span id="rewardTargetBadge">10</span> แต้ม</span>
+    </span>
+    <span class="text-xs text-[#4a3b32] font-bold">🎀✨</span>
+  </div>
+  <div class="bg-white/90 border border-[#ebdcd5] rounded-2xl p-3.5 space-y-1 backdrop-blur-sm">
+    <div id="rewardTitleDisplay" class="text-sm sm:text-base font-bold font-serif text-[#4a3b32]">ฟรี! เครื่องดื่มหรือขนมหวานเมนูพิเศษ 1 ที่</div>
+    <p id="rewardDescDisplay" class="text-xs text-[#8c7872] font-serif italic">แสดงบัตรที่สะสมแต้มครบแล้วให้แอดมินเพื่อกดรับสิทธิ์ได้เลยค่ะ</p>
+  </div>
+</div>
+
+<div class="princess-panel p-4 sm:p-5 relative overflow-hidden space-y-2.5">
+  <h3 class="text-xs sm:text-sm font-bold font-serif text-[#4a3b32] flex items-center justify-between">
+    <span class="flex items-center gap-2"><i class="fa-solid fa-heart text-[#d46a84]"></i><span>กติกาการสะสมแต้ม &amp; แลกของรางวัล</span></span>
+    <span class="text-[10px] bg-[#fcecf2] border border-[#f2cbdb] px-2 py-0.5 rounded-full text-[#8c7872] font-serif italic">made to unwind</span>
+  </h3>
+  <div class="editorial-divider"></div>
+  <ol id="loyaltyRulesList" class="text-xs sm:text-[13px] text-[#6b5852] font-serif space-y-1.5 pl-1 leading-relaxed">
+    <li>1. แจ้งรหัสบัตรสมาชิก (เช่น <strong class="text-[#d46a84]">INR-001</strong>) กับทางร้านทุกครั้งที่ใช้บริการ</li>
+    <li>2. แอดมินจะทำการประทับตราเพิ่มแต้มให้ในบัตรของคุณหนู</li>
+    <li>3. เมื่อสะสมครบ <strong id="ruleTargetPointsText" class="text-[#d46a84] font-bold">10 แต้ม</strong> สามารถกดแลกรับของรางวัลได้ทันที</li>
+    <li>4. หลังแลกของรางวัลแล้ว แต้มจะรีเซ็ตเพื่อเริ่มสะสมรอบใหม่ค่ะ 🌷</li>
+  </ol>
+</div>
+</div>
+
+<div class="max-w-xl mx-auto mt-6 flex justify-between items-center px-4 py-2 princess-hud-bar text-[#4a3b32] text-[10px] relative z-10 mb-6 font-serif">
+  <span class="font-semibold tracking-wider"><i class="fa-solid fa-heart mr-1 text-[#d46a84]"></i> INARICH STORE // LOUNGE</span>
+  <span class="tracking-widest italic text-[#8c7872]">slow mornings &amp; sweet dreams</span>
+  <span class="font-semibold">THANK YOU <i class="fa-solid fa-heart text-[#d46a84] ml-1"></i></span>
+</div>
+
+<!-- ADMIN MODAL -->
+<div id="adminModal" class="fixed inset-0 bg-[#4a3b32]/50 backdrop-blur-md z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 hidden">
+<div class="princess-panel max-w-2xl w-full p-4 sm:p-6 relative shadow-2xl max-h-[92vh] flex flex-col font-serif">
+  <div class="flex items-center justify-between pb-3 border-b border-dashed border-[#ebdcd5]">
+    <div>
+      <h3 class="text-xs sm:text-base font-bold text-[#4a3b32] flex items-center space-x-2"><i class="fa-solid fa-wand-magic-sparkles text-[#d46a84] text-xs sm:text-sm"></i><span>แผงควบคุมระบบสะสมแต้ม &amp; ร้านค้า</span></h3>
+      <p class="text-[10px] sm:text-xs text-[#8c7872] italic mt-0.5">กำหนดแต้มเป้าหมาย ออกบัตรให้ลูกค้า ประทับตราเพิ่ม/ลดแต้ม และตั้งค่าของรางวัล</p>
+    </div>
+    <button onclick="toggleAdminModal(false)" class="text-[#4a3b32] hover:text-[#d46a84] p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+  </div>
+  <div class="overflow-y-auto flex-1 my-4 space-y-5 pr-1">
+
+    <div class="bg-[#fcecf2]/50 border border-[#ebdcd5] rounded-2xl p-4 space-y-3.5">
+      <h4 class="text-xs font-bold text-[#4a3b32] flex items-center justify-between border-b border-dashed border-[#ebdcd5] pb-2">
+        <span class="flex items-center space-x-1.5"><i class="fa-solid fa-gift text-[#d46a84]"></i><span>ตั้งค่าเป้าหมายแต้มสะสม &amp; ของรางวัล</span></span>
+        <span class="text-[10px] text-[#8c7872] italic">REWARD CONFIG</span>
+      </h4>
+      <div class="bg-white/95 p-3 rounded-xl border border-[#ebdcd5] space-y-2.5">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div>
+            <span class="text-[10px] text-[#8c7872] font-bold">จำนวนแต้มที่ต้องสะสม (1-30):</span>
+            <input type="number" id="adminTargetPointsInput" min="1" max="30" value="10" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99] font-bold">
+          </div>
+          <div class="sm:col-span-2">
+            <span class="text-[10px] text-[#8c7872] font-bold">ชื่อของรางวัลเมื่อสะสมครบ:</span>
+            <input type="text" id="adminRewardTitleInput" placeholder="เช่น ฟรี! เครื่องดื่มเมนูพิเศษ 1 แก้ว" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          </div>
+        </div>
+        <div>
+          <span class="text-[10px] text-[#8c7872] font-bold">รายละเอียด / เงื่อนไขของรางวัล:</span>
+          <input type="text" id="adminRewardDescInput" placeholder="รายละเอียดเพิ่มเติม..." class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+        </div>
+        <div class="pt-2 border-t border-dashed border-[#ebdcd5] space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] text-[#8c7872] font-bold">รูปภาพแสตมป์สำหรับประทับตราให้ลูกค้า:</span>
+            <button id="resetStampImgBtn" onclick="resetStampImage()" class="hidden text-[10px] text-rose-600 underline font-bold">ใช้ไอคอนหัวใจเริ่มต้น</button>
+          </div>
+          <div class="flex items-center gap-3">
+            <div id="adminStampPreviewBox" class="w-12 h-12 rounded-full bg-[#e07a99] border border-[#ebdcd5] flex items-center justify-center text-white shrink-0 overflow-hidden shadow-sm"><i class="fa-solid fa-heart text-lg"></i></div>
+            <div class="flex-1 flex flex-col sm:flex-row gap-2">
+              <label class="flex items-center justify-center space-x-1.5 bg-white hover:bg-pink-50 border border-[#ebdcd5] rounded-xl px-3 py-2 text-xs text-[#4a3b32] cursor-pointer transition font-bold shrink-0">
+                <i class="fa-solid fa-upload text-[#d46a84]"></i><span>อัปโหลดรูปแสตมป์</span>
+                <input type="file" accept="image/*" onchange="handleStampImageUpload(event)" class="hidden">
+              </label>
+              <input type="text" id="adminStampUrlInput" placeholder="หรือวาง URL รูปภาพแสตมป์..." class="flex-1 bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+            </div>
+          </div>
+        </div>
+        <button onclick="updateLoyaltyConfigFromAdmin()" class="w-full princess-btn text-xs py-2 font-bold">บันทึกการตั้งค่าเป้าหมาย แสตมป์ และของรางวัล</button>
+      </div>
+    </div>
+
+    <div class="bg-[#fcecf2]/50 border border-[#ebdcd5] rounded-2xl p-4 space-y-3.5">
+      <h4 class="text-xs font-bold text-[#4a3b32] flex items-center justify-between border-b border-dashed border-[#ebdcd5] pb-2">
+        <span class="flex items-center space-x-1.5"><i class="fa-solid fa-id-card-clip text-[#d46a84]"></i><span>ออกบัตรสะสมแต้ม &amp; จัดการแต้มลูกค้า</span></span>
+        <span class="text-[10px] text-[#8c7872] italic">MEMBER CARDS</span>
+      </h4>
+      <div class="bg-white/95 p-3 rounded-xl border border-[#ebdcd5] space-y-2">
+        <div class="text-xs font-bold text-[#4a3b32] flex items-center gap-1.5"><i class="fa-solid fa-plus-circle text-[#d46a84]"></i><span>ออกบัตรสมาชิกใบใหม่ให้ลูกค้า</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <input type="text" id="newCardNameInput" placeholder="ชื่อลูกค้า (เช่น น้องอลิซ)" class="sm:col-span-2 bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          <input type="number" id="newCardInitialPointsInput" min="0" max="30" value="1" placeholder="แต้มเริ่มต้น" class="bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99] font-bold">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <select id="newCardContactPlatformInput" class="bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99] font-bold">
+            <option value="Line">ติดต่อทาง: Line</option>
+            <option value="Instagram">ติดต่อทาง: Instagram</option>
+            <option value="Facebook">ติดต่อทาง: Facebook</option>
+            <option value="TikTok">ติดต่อทาง: TikTok</option>
+            <option value="Phone">ติดต่อทาง: เบอร์โทร</option>
+            <option value="Other">ติดต่อทาง: อื่นๆ</option>
+          </select>
+          <input type="text" id="newCardContactValueInput" placeholder="ไอดีไลน์ / IG / เบอร์โทรลูกค้า..." class="sm:col-span-2 bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+        </div>
+        <div class="flex gap-2">
+          <input type="text" id="newCardCodeInput" placeholder="รหัสบัตร (เว้นว่างเพื่อสุ่มอัตโนมัติ เช่น INR-003)" class="flex-1 bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          <button onclick="issueNewMemberCard()" class="princess-btn text-xs px-4 py-2 font-bold shrink-0">+ ออกบัตรให้ลูกค้า</button>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold text-[#4a3b32]">รายชื่อลูกค้าทั้งหมด (คลิกที่ชื่อลูกค้าเพื่อจัดการแต้ม, โปรไฟล์ &amp; ประวัติ):</span>
+          <span id="adminTotalCardsCount" class="text-[10px] bg-white border border-[#ebdcd5] px-2 py-0.5 rounded-full font-bold text-[#d46a84]">2 บัตร</span>
+        </div>
+        <div id="adminMemberCardsList" class="space-y-2 max-h-60 overflow-y-auto pr-1"></div>
+      </div>
+    </div>
+
+    <div class="bg-[#fcecf2]/50 border border-[#ebdcd5] rounded-2xl p-4 space-y-4">
+      <h4 class="text-xs font-bold text-[#4a3b32] flex items-center space-x-1.5 border-b border-dashed border-[#ebdcd5] pb-2"><i class="fa-solid fa-pen-to-square text-[#d46a84]"></i><span>ตั้งค่าข้อมูลและรูปภาพร้านค้า</span></h4>
+      <div class="space-y-2 border-b border-dashed border-[#ebdcd5] pb-3">
+        <label class="block text-xs font-bold text-[#4a3b32]">ข้อความและสถานะร้านค้า</label>
+        <div class="space-y-2">
+          <div>
+            <span class="text-[10px] text-[#8c7872] font-bold">คำอธิบายร้าน:</span>
+            <input type="text" id="adminDescInput" placeholder="คำอธิบาย..." class="w-full bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div>
+              <span class="text-[10px] text-[#8c7872] font-bold">ข้อความสถานะ (Status):</span>
+              <input type="text" id="adminStatusInput" placeholder="status..." class="w-full bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+            </div>
+            <div>
+              <span class="text-[10px] text-[#8c7872] font-bold">แท็กระบบ (Tags):</span>
+              <input type="text" id="adminTagsInput" placeholder="loungewear / sleepy / cozy" class="w-full bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+            </div>
+          </div>
+          <button onclick="updateShopInfoFromAdmin()" class="w-full princess-btn text-xs py-2 font-bold">อัปเดตข้อมูลร้านค้า</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-2">
+          <label class="block text-xs text-[#4a3b32] font-bold">โลโก้ร้านค้า (LOGO)</label>
+          <div class="space-y-2">
+            <label class="w-full flex items-center justify-center space-x-2 bg-white hover:bg-pink-50 border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] cursor-pointer transition shadow-sm font-bold">
+              <i class="fa-solid fa-upload text-[#d46a84]"></i><span>อัปโหลดรูปโลโก้</span>
+              <input type="file" id="adminLogoFileInput" accept="image/*" onchange="handleLogoFileUpload(event)" class="hidden">
+            </label>
+            <div class="flex space-x-2">
+              <input type="text" id="adminLogoInput" placeholder="หรือวาง URL รูปโลโก้..." class="w-full bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+              <button onclick="updateLogoFromAdmin()" class="princess-btn text-xs px-3 py-1.5 font-bold">บันทึก</button>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label class="block text-xs text-[#4a3b32] font-bold">แบนเนอร์ร้านค้า (BANNER)</label>
+          <div id="adminBannerControl"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#fcecf2]/50 border border-[#ebdcd5] rounded-2xl p-4 space-y-3">
+      <h4 class="text-xs font-bold text-[#4a3b32] flex items-center justify-between border-b border-dashed border-[#ebdcd5] pb-2">
+        <span class="flex items-center space-x-1.5"><i class="fa-solid fa-address-book text-[#d46a84]"></i><span>ช่องทางการติดต่อ (Contact Channels)</span></span>
+      </h4>
+      <div id="adminContactList" class="space-y-2.5"></div>
+      <div class="pt-2 border-t border-dashed border-[#ebdcd5]">
+        <label class="block text-[11px] text-[#4a3b32] font-bold mb-1">เพิ่มช่องทางติดต่อใหม่:</label>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          <select id="newContactPlatform" class="bg-white border border-[#ebdcd5] text-[#4a3b32] text-xs rounded-xl p-2 focus:outline-none focus:border-[#e07a99] font-bold">
+            <option value="facebook">Facebook</option><option value="line">Line</option><option value="instagram">Instagram</option>
+            <option value="tiktok">TikTok</option><option value="twitter">X (Twitter)</option><option value="shopee">Shopee</option>
+            <option value="lazada">Lazada</option><option value="youtube">YouTube</option><option value="phone">เบอร์โทรศัพท์ (Phone)</option>
+            <option value="email">อีเมล (Email)</option><option value="telegram">Telegram</option><option value="discord">Discord</option>
+            <option value="other">อื่นๆ (Link)</option>
+          </select>
+          <input type="text" id="newContactUrl" placeholder="ใส่ลิงก์ติดต่อ..." class="flex-1 bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          <button onclick="addContactChannel()" class="princess-btn text-xs px-3 py-2 whitespace-nowrap font-bold">+ เพิ่มช่องทาง</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-3 border-t border-dashed border-[#ebdcd5] flex justify-between items-center text-xs font-bold">
+    <span>ผู้ดูแลระบบ: เจ้าหญิง <i class="fa-solid fa-crown text-[#d46a84] ml-1"></i></span>
+    <button onclick="toggleAdminModal(false)" class="princess-btn px-4 py-2 text-xs font-bold">ปิดหน้าต่าง</button>
+  </div>
+</div>
+</div>
+
+<!-- CUSTOMER DETAIL MODAL -->
+<div id="adminCustomerDetailModal" class="fixed inset-0 bg-[#4a3b32]/60 backdrop-blur-md z-[60] flex items-end sm:items-center justify-center p-0 sm:p-4 hidden">
+<div class="princess-panel max-w-lg w-full p-4 sm:p-6 relative shadow-2xl max-h-[92vh] flex flex-col font-serif">
+  <div class="flex items-center justify-between pb-3 border-b border-dashed border-[#ebdcd5]">
+    <div class="flex items-center gap-2.5 min-w-0">
+      <div id="modalCustAvatar" class="w-10 h-10 rounded-2xl bg-[#fcecf2] border border-[#f2cbdb] flex items-center justify-center text-[#d46a84] shrink-0 overflow-hidden"></div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-1.5">
+          <span id="modalCustCodeBadge" class="text-[10px] bg-[#fcecf2] border border-[#f2cbdb] text-[#4a3b32] px-2 py-0.5 rounded-full font-bold">INR-001</span>
+          <button onclick="copyModalCustomerCode()" class="bg-[#e07a99] hover:bg-[#d46a84] text-white border border-[#ebdcd5] px-2.5 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-1 transition">
+            <i class="fa-regular fa-copy"></i><span>คัดลอกรหัสบัตร</span>
+          </button>
+        </div>
+        <h3 id="modalCustTitle" class="text-sm sm:text-base font-bold text-[#4a3b32] truncate mt-0.5">จัดการบัตรของ คุณหนูมิโอริ</h3>
+      </div>
+    </div>
+    <button onclick="closeAdminCustomerModal()" class="text-[#4a3b32] hover:text-[#d46a84] p-1.5 shrink-0"><i class="fa-solid fa-xmark text-lg"></i></button>
+  </div>
+
+  <div class="overflow-y-auto flex-1 my-4 space-y-4 pr-1">
+    <div class="bg-[#fcecf2]/80 border border-[#ebdcd5] rounded-2xl p-4 space-y-3 shadow-sm">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-[11px] font-bold text-[#8c7872]">แต้มสะสมปัจจุบันของลูกค้า</div>
+          <div class="text-2xl sm:text-3xl font-bold text-[#4a3b32]">
+            <span id="modalCustPoints" class="text-[#d46a84]">7</span>
+            <span class="text-sm text-[#8c7872]"> / <span id="modalCustTargetPoints">10</span> แต้ม</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <span id="modalCustRedeemedBadge" class="inline-block bg-white/90 border border-[#ebdcd5] px-2.5 py-1 rounded-full text-[10px] font-bold text-[#4a3b32]">แลกรางวัลแล้ว 0 ครั้ง</span>
+        </div>
+      </div>
+      <div id="modalCustStampPreview" class="flex flex-wrap gap-1.5 justify-center bg-white/90 border border-[#ebdcd5] rounded-xl p-2.5"></div>
+      <div class="grid grid-cols-2 gap-2.5 pt-1">
+        <button onclick="adjustModalCustomerPoints(-1)" class="py-2.5 px-4 rounded-full bg-white hover:bg-rose-50 border border-[#f2cbdb] text-[#4a3b32] text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 shadow-sm active:translate-y-0.5 transition">
+          <i class="fa-solid fa-minus text-rose-500"></i><span>ลบ 1 แต้ม</span>
+        </button>
+        <button onclick="adjustModalCustomerPoints(1)" class="princess-btn py-2.5 px-4 text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-heart text-pink-200"></i><span>เพิ่ม +1 แต้ม</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Avatar picker -->
+    <div class="bg-white/95 border border-[#ebdcd5] rounded-2xl p-3.5 space-y-2.5">
+      <div class="flex items-center justify-between border-b border-dashed border-[#ebdcd5] pb-1.5">
+        <span class="text-xs font-bold text-[#4a3b32] flex items-center gap-1.5"><i class="fa-solid fa-face-smile text-[#d46a84]"></i><span>รูปโปรไฟล์ลูกค้า</span></span>
+        <button id="resetAvatarBtn" onclick="resetCardAvatar()" class="hidden text-[10px] text-rose-600 underline font-bold">ใช้ไอคอนแทน</button>
+      </div>
+      <div id="modalAvatarPicker" class="grid grid-cols-6 gap-2"></div>
+      <label class="w-full flex items-center justify-center gap-1.5 bg-[#fcecf2] hover:bg-pink-100 border border-[#f2cbdb] rounded-xl px-3 py-2 text-xs text-[#4a3b32] cursor-pointer transition font-bold">
+        <i class="fa-solid fa-upload text-[#d46a84]"></i><span>อัปโหลดรูปโปรไฟล์ (แอดมิน)</span>
+        <input type="file" accept="image/*" onchange="handleCardAvatarUpload(event)" class="hidden">
+      </label>
+    </div>
+
+    <div class="bg-white/95 border border-[#ebdcd5] rounded-2xl p-3.5 space-y-2.5">
+      <div class="text-xs font-bold text-[#4a3b32] flex items-center gap-1.5 border-b border-dashed border-[#ebdcd5] pb-1.5">
+        <i class="fa-solid fa-pen-to-square text-[#d46a84]"></i><span>แก้ไขข้อมูลบัตร &amp; ช่องทางติดต่อลูกค้า</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <div>
+          <label class="block text-[10px] font-bold text-[#8c7872]">รหัสบัตร:</label>
+          <input type="text" id="modalEditCodeInput" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl px-2.5 py-1.5 text-xs font-bold text-[#4a3b32]">
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-[10px] font-bold text-[#8c7872]">ชื่อลูกค้า:</label>
+          <input type="text" id="modalEditNameInput" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl px-2.5 py-1.5 text-xs font-bold text-[#4a3b32]">
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+        <div>
+          <label class="block text-[10px] font-bold text-[#8c7872]">ช่องทางติดต่อ:</label>
+          <select id="modalEditContactPlatform" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl px-2.5 py-1.5 text-xs font-bold text-[#4a3b32]">
+            <option value="Line">Line</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option>
+            <option value="TikTok">TikTok</option><option value="Phone">เบอร์โทร</option><option value="Other">อื่นๆ</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-[10px] font-bold text-[#8c7872]">ไอดี / เบอร์โทร / ลิงก์ติดต่อ:</label>
+          <input type="text" id="modalEditContactValue" placeholder="เช่น @miori_princess หรือ 081-234-5678" class="w-full bg-[#fcf9f5] border border-[#ebdcd5] rounded-xl px-2.5 py-1.5 text-xs font-medium text-[#4a3b32]">
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+        <button onclick="saveModalCustomerEdit()" class="princess-btn px-4 py-1.5 text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> บันทึกข้อมูลลูกค้า</button>
+        <button onclick="previewCustomerCardOnMain()" class="bg-[#fcecf2] hover:bg-pink-100 border border-[#f2cbdb] text-[#4a3b32] px-3 py-1.5 rounded-full text-xs font-bold transition"><i class="fa-solid fa-eye mr-1 text-[#d46a84]"></i> แสดงบัตรนี้บนหน้าเว็บ</button>
+      </div>
+    </div>
+
+    <div class="bg-[#fcecf2]/60 border border-[#ebdcd5] rounded-2xl p-3.5 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-bold text-[#4a3b32] flex items-center gap-1.5"><i class="fa-solid fa-clock-rotate-left text-[#d46a84]"></i><span>ประวัติการบวก/ลบแต้ม &amp; แลกรางวัลของลูกค้า</span></span>
+        <span id="modalHistoryCountBadge" class="text-[10px] bg-white border border-[#ebdcd5] px-2 py-0.5 rounded-full font-bold text-[#d46a84]">0 รายการ</span>
+      </div>
+      <div id="modalCustHistoryList" class="bg-white/90 border border-[#ebdcd5] rounded-xl p-2.5 max-h-44 overflow-y-auto space-y-1.5"></div>
+    </div>
+  </div>
+
+  <div class="pt-3 border-t border-dashed border-[#ebdcd5] flex justify-between items-center text-xs font-bold">
+    <button onclick="deleteModalCustomerCard()" class="px-3 py-1.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 border border-[#ebdcd5] text-xs font-bold flex items-center gap-1 transition">
+      <i class="fa-solid fa-trash text-[10px]"></i><span>ลบบัตรลูกค้านี้</span>
+    </button>
+    <button onclick="closeAdminCustomerModal()" class="princess-btn px-5 py-2 text-xs font-bold">เสร็จสิ้น</button>
+  </div>
+</div>
+</div>
+
+<script>
+let bannerUrl = "https://placehold.co/1122x495/fcecf2/4a3b32?text=Inarich+Lounge+Banner";
+let shopDesc = "\"The ultimate me-time direct to your door\"";
+let shopStatusText = "status: พร้อมต้อนรับคุณหนูค่ะ";
+let shopTagsText = "loungewear / sleepy / cozy / aesthetic";
+
+let contactLinks = [
+  { id: 1, platform: 'facebook', label: 'Facebook', url: 'https://facebook.com', icon: 'fa-brands fa-facebook-f' },
+  { id: 2, platform: 'line', label: 'Line', url: 'https://line.me', icon: 'fa-brands fa-line' },
+  { id: 3, platform: 'instagram', label: 'Instagram', url: 'https://instagram.com', icon: 'fa-brands fa-instagram' },
+  { id: 4, platform: 'tiktok', label: 'TikTok', url: 'https://tiktok.com', icon: 'fa-brands fa-tiktok' }
+];
+const platformMeta = {
+  facebook: { label: 'Facebook', icon: 'fa-brands fa-facebook-f' },
+  line: { label: 'Line', icon: 'fa-brands fa-line' },
+  instagram: { label: 'Instagram', icon: 'fa-brands fa-instagram' },
+  tiktok: { label: 'TikTok', icon: 'fa-brands fa-tiktok' },
+  twitter: { label: 'X (Twitter)', icon: 'fa-brands fa-x-twitter' },
+  shopee: { label: 'Shopee', icon: 'fa-solid fa-bag-shopping' },
+  lazada: { label: 'Lazada', icon: 'fa-solid fa-store' },
+  youtube: { label: 'YouTube', icon: 'fa-brands fa-youtube' },
+  phone: { label: 'Phone', icon: 'fa-solid fa-phone' },
+  email: { label: 'Email', icon: 'fa-solid fa-envelope' },
+  telegram: { label: 'Telegram', icon: 'fa-brands fa-telegram' },
+  discord: { label: 'Discord', icon: 'fa-brands fa-discord' },
+  other: { label: 'Link', icon: 'fa-solid fa-link' }
+};
+
+let loyaltyConfig = {
+  targetPoints: 10,
+  rewardTitle: "ฟรี! เครื่องดื่มหรือขนมหวานเมนูพิเศษ 1 ที่",
+  rewardDescription: "แสดงบัตรที่สะสมแต้มครบแล้วให้แอดมินเพื่อกดรับสิทธิ์ได้เลยค่ะ",
+  stampImageUrl: ""
+};
+
+let memberCards = [
+  {
+    id: 1, code: "INR-001", name: "คุณหนูมิโอริ (Miori)", contactPlatform: "Line", contactValue: "@miori_princess",
+    points: 7, redeemedCount: 1, avatar: { type: 'icon', value: 'fa-heart' },
+    history: [
+      { id: 103, type: 'add', delta: '+1 แต้ม', note: 'แอดมินประทับตราเพิ่มแต้ม', balance: 7, timestamp: '14 พ.ย. 2026 02:15' },
+      { id: 102, type: 'redeem', delta: '-10 แต้ม', note: 'แลกรางวัล: ฟรี! เครื่องดื่มหรือขนมหวานเมนูพิเศษ 1 ที่', balance: 0, timestamp: '10 พ.ย. 2026 15:30' },
+      { id: 101, type: 'issue', delta: '+6 แต้ม', note: 'เปิดบัตรสมาชิกเริ่มต้น', balance: 6, timestamp: '01 พ.ย. 2026 11:00' }
+    ]
+  },
+  {
+    id: 2, code: "INR-002", name: "คุณหนูอลิซ (Alice)", contactPlatform: "Instagram", contactValue: "@alice.sweet",
+    points: 10, redeemedCount: 0, avatar: { type: 'icon', value: 'fa-cat' },
+    history: [
+      { id: 202, type: 'add', delta: '+2 แต้ม', note: 'แอดมินประทับตราเพิ่มแต้ม', balance: 10, timestamp: '13 พ.ย. 2026 18:20' },
+      { id: 201, type: 'issue', delta: '+8 แต้ม', note: 'เปิดบัตรสมาชิกเริ่มต้น', balance: 8, timestamp: '05 พ.ย. 2026 14:10' }
+    ]
+  }
+];
+let activeCardId = 1;
+let modalEditingCardId = null;
+
+/* ---------- Avatar (customer profile) ---------- */
+const AVATAR_ICONS = [
+  'fa-heart','fa-star','fa-cat','fa-dog','fa-paw','fa-moon',
+  'fa-cloud','fa-ice-cream','fa-cookie-bite','fa-cake-candles','fa-gem','fa-dove'
+];
+
+function avatarInnerHtml(card) {
+  const av = card.avatar;
+  if (av && av.type === 'image' && av.value) {
+    return `<img src="${escapeHtml(av.value)}" class="w-full h-full object-cover" alt="avatar">`;
+  }
+  const icon = (av && av.type === 'icon' && av.value) ? av.value : 'fa-heart';
+  return `<i class="fa-solid ${icon}"></i>`;
+}
+
+function renderAvatarPicker(card) {
+  const picker = document.getElementById('modalAvatarPicker');
+  const hasImg = !!(card.avatar && card.avatar.type === 'image');
+  const current = (card.avatar && card.avatar.type === 'icon') ? card.avatar.value : (hasImg ? '' : 'fa-heart');
+  picker.innerHTML = AVATAR_ICONS.map(ic => `
+    <button type="button" onclick="setCardAvatarIcon('${ic}')"
+      class="w-full aspect-square rounded-xl flex items-center justify-center text-base transition border ${ic === current ? 'bg-[#e07a99] text-white border-[#c96382] shadow-sm' : 'bg-[#fcf9f5] text-[#d46a84] border-[#ebdcd5] hover:bg-[#fcecf2]'}">
+      <i class="fa-solid ${ic}"></i>
+    </button>`).join('');
+  document.getElementById('resetAvatarBtn').classList.toggle('hidden', !hasImg);
+}
+
+function refreshAvatarsEverywhere() {
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  renderAdminCustomerModal();
+}
+
+function setCardAvatarIcon(icon) {
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!card) return;
+  card.avatar = { type: 'icon', value: icon };
+  refreshAvatarsEverywhere();
+  showToast('เปลี่ยนไอคอนโปรไฟล์เรียบร้อยค่ะ');
+}
+
+function handleCardAvatarUpload(event) {
+  const file = event.target.files[0];
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!file || !card) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    card.avatar = { type: 'image', value: e.target.result };
+    refreshAvatarsEverywhere();
+    showToast('อัปโหลดรูปโปรไฟล์ลูกค้าเรียบร้อยค่ะ');
+  };
+  reader.readAsDataURL(file);
+  event.target.value = '';
+}
+
+function resetCardAvatar() {
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!card) return;
+  card.avatar = { type: 'icon', value: 'fa-heart' };
+  refreshAvatarsEverywhere();
+}
+
+/* ---------- History ---------- */
+function getFormattedTimestamp() {
+  const now = new Date();
+  const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  const d = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const mm = String(now.getMinutes()).padStart(2, '0');
+  return `${d} ${months[now.getMonth()]} ${now.getFullYear()} ${hh}:${mm}`;
+}
+
+function recordCardHistory(card, type, deltaText, noteText) {
+  if (!card.history) card.history = [];
+  card.history.unshift({
+    id: Date.now() + Math.floor(Math.random() * 1000),
+    type: type, delta: deltaText, note: noteText, balance: card.points, timestamp: getFormattedTimestamp()
+  });
+}
+
+/* ---------- Main render ---------- */
+function renderLoyaltySection() {
+  if (memberCards.length === 0) return;
+  if (!memberCards.some(c => c.id === activeCardId)) activeCardId = memberCards[0].id;
+
+  const card = memberCards.find(c => c.id === activeCardId);
+  const target = loyaltyConfig.targetPoints;
+  const current = card.points;
+  const remaining = Math.max(0, target - current);
+  const percent = Math.min(100, Math.round((current / target) * 100));
+
+  document.getElementById('cardCodeDisplay').innerText = card.code;
+  document.getElementById('cardHolderNameDisplay').innerText = card.name;
+  document.getElementById('cardAvatarDisplay').innerHTML = avatarInnerHtml(card);
+  document.getElementById('currentPointsDisplay').innerText = current;
+  document.getElementById('targetPointsDisplay').innerText = target;
+
+  const contactDisplayEl = document.getElementById('cardCustomerContactDisplay');
+  const contactIconMap = {
+    Line: 'fa-brands fa-line text-emerald-600',
+    Instagram: 'fa-brands fa-instagram text-pink-500',
+    Facebook: 'fa-brands fa-facebook text-blue-600',
+    TikTok: 'fa-brands fa-tiktok text-[#4a3b32]',
+    Phone: 'fa-solid fa-phone text-pink-500',
+    Other: 'fa-solid fa-address-card text-pink-500'
+  };
+  if (card.contactValue && card.contactValue.trim() !== '') {
+    const iconCls = contactIconMap[card.contactPlatform] || 'fa-solid fa-address-card text-pink-500';
+    contactDisplayEl.innerHTML = `<i class="${iconCls}"></i><span>${escapeHtml(card.contactPlatform)}: ${escapeHtml(card.contactValue)}</span>`;
+  } else {
+    contactDisplayEl.innerHTML = `<i class="fa-regular fa-address-card text-pink-400"></i><span class="text-[#8c7872] font-normal">ยังไม่ได้ระบุช่องทางติดต่อลูกค้า</span>`;
+  }
+
+  const progressStatusText = document.getElementById('progressStatusText');
+  if (current >= target) {
+    progressStatusText.innerHTML = `<span class="text-[#d46a84] font-bold"><i class="fa-solid fa-heart mr-1"></i>สะสมครบแล้ว! พร้อมแลกของรางวัลค่ะ</span>`;
+  } else {
+    progressStatusText.innerText = `อีก ${remaining} แต้ม จะแลกของรางวัลได้แล้วค่ะ!`;
+  }
+  document.getElementById('progressPercentText').innerText = `${percent}%`;
+  document.getElementById('pointsProgressBar').style.width = `${percent}%`;
+
+  const gridContainer = document.getElementById('stampGridContainer');
+  const totalSlots = Math.max(target, current);
+  let slotsHtml = '';
+  for (let i = 1; i <= totalSlots; i++) {
+    const isStamped = i <= current;
+    const isGoalSlot = i === target;
+    if (isStamped) {
+      if (loyaltyConfig.stampImageUrl && loyaltyConfig.stampImageUrl.trim() !== '') {
+        slotsHtml += `
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-[#ebdcd5] shadow-sm flex items-center justify-center relative overflow-hidden transition">
+            <img src="${escapeHtml(loyaltyConfig.stampImageUrl)}" alt="Stamp ${i}" class="w-full h-full object-cover">
+            <span class="absolute bottom-0 right-0 bg-[#e07a99] text-white text-[8px] font-bold px-1 rounded-tl-md">${i}</span>
+          </div>`;
+      } else {
+        const iconHtml = isGoalSlot
+          ? `<i class="fa-solid fa-crown text-amber-500 text-base sm:text-lg"></i>`
+          : `<i class="fa-solid fa-heart text-white text-sm sm:text-base"></i>`;
+        slotsHtml += `
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#e07a99] border border-[#ebdcd5] shadow-sm flex items-center justify-center relative transition">
+            ${iconHtml}
+            <span class="absolute -bottom-1 -right-1 bg-[#fcecf2] text-[#4a3b32] border border-[#e07a99] text-[8px] font-bold w-4 h-4 rounded-full flex items-center justify-center">${i}</span>
+          </div>`;
+      }
+    } else {
+      slotsHtml += `
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-dashed ${isGoalSlot ? 'border-[#e07a99] bg-[#fcecf2]/40' : 'border-[#ebdcd5]'} flex flex-col items-center justify-center text-[#8c7872] transition">
+          ${isGoalSlot ? '<i class="fa-solid fa-gift text-[#e07a99] text-xs"></i>' : `<span class="text-xs font-bold">${i}</span>`}
+        </div>`;
+    }
+  }
+  gridContainer.innerHTML = slotsHtml;
+
+  const redeemBtn = document.getElementById('redeemRewardBtn');
+  const redeemBtnText = document.getElementById('redeemBtnText');
+  if (current >= target) {
+    redeemBtn.disabled = false;
+    redeemBtn.classList.add('animate-bounce');
+    redeemBtnText.innerText = `แลกของรางวัลทันที!`;
+  } else {
+    redeemBtn.disabled = true;
+    redeemBtn.classList.remove('animate-bounce');
+    redeemBtnText.innerText = `ขาดอีก ${remaining} แต้ม`;
+  }
+
+  renderHistoryListToElement(card, 'cardHistoryList', 'historyCountBadge');
+
+  document.getElementById('rewardTargetBadge').innerText = target;
+  document.getElementById('rewardTitleDisplay').innerText = loyaltyConfig.rewardTitle;
+  document.getElementById('rewardDescDisplay').innerText = loyaltyConfig.rewardDescription;
+  document.getElementById('ruleTargetPointsText').innerText = `${target} แต้ม`;
+}
+
+function renderHistoryListToElement(card, listElementId, badgeElementId) {
+  const historyListEl = document.getElementById(listElementId);
+  const historyCountBadge = document.getElementById(badgeElementId);
+  if (!historyListEl || !historyCountBadge) return;
+  const logs = card.history || [];
+  historyCountBadge.innerText = `${logs.length} รายการ`;
+  if (logs.length === 0) {
+    historyListEl.innerHTML = `<div class="text-[11px] text-[#8c7872] text-center py-3">ยังไม่มีประวัติการทำรายการของบัตรใบนี้ค่ะ</div>`;
+    return;
+  }
+  historyListEl.innerHTML = logs.map(item => {
+    let badgeClass = 'bg-[#fcecf2] text-[#d46a84] border-[#f2cbdb]';
+    let iconClass = 'fa-solid fa-plus text-[#d46a84]';
+    if (item.type === 'subtract') { badgeClass = 'bg-rose-50 text-rose-700 border-rose-200'; iconClass = 'fa-solid fa-minus text-rose-500'; }
+    else if (item.type === 'redeem') { badgeClass = 'bg-[#d46a84] text-amber-200 border-[#ebdcd5]'; iconClass = 'fa-solid fa-gift text-amber-400'; }
+    else if (item.type === 'issue') { badgeClass = 'bg-emerald-50 text-emerald-700 border-emerald-200'; iconClass = 'fa-solid fa-id-card text-emerald-500'; }
+    return `
+      <div class="flex items-center justify-between gap-2 text-[11px] bg-[#fcf9f5] border border-[#ebdcd5] rounded-lg px-2.5 py-1.5">
+        <div class="min-w-0 flex-1">
+          <div class="font-bold text-[#4a3b32] truncate flex items-center gap-1.5"><i class="${iconClass} text-[10px]"></i><span>${escapeHtml(item.note)}</span></div>
+          <div class="text-[9px] text-[#8c7872]">${escapeHtml(item.timestamp)} • คงเหลือ ${item.balance} แต้ม</div>
+        </div>
+        <span class="px-2 py-0.5 rounded-full border text-[10px] font-bold shrink-0 ${badgeClass}">${escapeHtml(item.delta)}</span>
+      </div>`;
+  }).join('');
+}
+
+function lookupCustomerOwnCard(event) {
+  if (event) event.preventDefault();
+  const query = document.getElementById('memberSearchInput').value.trim().toLowerCase();
+  if (!query) { showToast('กรุณากรอกรหัสบัตรสมาชิกของคุณค่ะ (เช่น INR-001)'); return; }
+  const found = memberCards.find(c => c.code.toLowerCase() === query);
+  if (found) {
+    activeCardId = found.id;
+    renderLoyaltySection();
+    showToast(`เปิดบัตรสะสมแต้มรหัส ${found.code} เรียบร้อยค่ะ!`);
+  } else {
+    showToast('ไม่พบรหัสบัตรสมาชิกนี้ กรุณาตรวจสอบรหัสอีกครั้งค่ะ');
+  }
+}
+
+function redeemCustomerReward() {
+  const card = memberCards.find(c => c.id === activeCardId);
+  if (!card || card.points < loyaltyConfig.targetPoints) return;
+  const usedPoints = loyaltyConfig.targetPoints;
+  card.points -= usedPoints;
+  card.redeemedCount = (card.redeemedCount || 0) + 1;
+  recordCardHistory(card, 'redeem', `-${usedPoints} แต้ม`, `แลกรางวัล: ${loyaltyConfig.rewardTitle}`);
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  if (modalEditingCardId === card.id) renderAdminCustomerModal();
+  showToast(`🎉 แลกรางวัล "${loyaltyConfig.rewardTitle}" สำเร็จ! (หัก ${usedPoints} แต้ม)`);
+}
+
+/* ---------- Customer modal ---------- */
+function openAdminCustomerModal(cardId) {
+  const card = memberCards.find(c => c.id === cardId);
+  if (!card) return;
+  modalEditingCardId = cardId;
+  renderAdminCustomerModal();
+  document.getElementById('adminCustomerDetailModal').classList.remove('hidden');
+}
+function closeAdminCustomerModal() {
+  modalEditingCardId = null;
+  document.getElementById('adminCustomerDetailModal').classList.add('hidden');
+}
+
+function renderAdminCustomerModal() {
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!card) return;
+  const target = loyaltyConfig.targetPoints;
+  document.getElementById('modalCustCodeBadge').innerText = card.code;
+  document.getElementById('modalCustTitle').innerText = `จัดการบัตรของ ${card.name}`;
+  document.getElementById('modalCustAvatar').innerHTML = avatarInnerHtml(card);
+  renderAvatarPicker(card);
+  document.getElementById('modalCustPoints').innerText = card.points;
+  document.getElementById('modalCustTargetPoints').innerText = target;
+  document.getElementById('modalCustRedeemedBadge').innerText = `แลกรางวัลแล้ว ${card.redeemedCount || 0} ครั้ง`;
+
+  document.getElementById('modalEditCodeInput').value = card.code;
+  document.getElementById('modalEditNameInput').value = card.name;
+  document.getElementById('modalEditContactPlatform').value = card.contactPlatform || 'Line';
+  document.getElementById('modalEditContactValue').value = card.contactValue || '';
+
+  const previewContainer = document.getElementById('modalCustStampPreview');
+  const totalSlots = Math.max(target, card.points);
+  let miniSlots = '';
+  for (let i = 1; i <= totalSlots; i++) {
+    if (i <= card.points) {
+      if (loyaltyConfig.stampImageUrl && loyaltyConfig.stampImageUrl.trim() !== '') {
+        miniSlots += `<div class="w-7 h-7 rounded-full border border-[#ebdcd5] overflow-hidden"><img src="${escapeHtml(loyaltyConfig.stampImageUrl)}" class="w-full h-full object-cover"></div>`;
+      } else {
+        miniSlots += `<div class="w-7 h-7 rounded-full bg-[#e07a99] text-white border border-[#ebdcd5] flex items-center justify-center text-[10px]"><i class="fa-solid fa-heart"></i></div>`;
+      }
+    } else {
+      miniSlots += `<div class="w-7 h-7 rounded-full bg-[#fcf9f5] border border-dashed border-[#ebdcd5] text-[#8c7872] flex items-center justify-center text-[10px] font-bold">${i}</div>`;
+    }
+  }
+  previewContainer.innerHTML = miniSlots;
+  renderHistoryListToElement(card, 'modalCustHistoryList', 'modalHistoryCountBadge');
+}
+
+function adjustModalCustomerPoints(delta) {
+  if (!modalEditingCardId) return;
+  adjustCardPoints(modalEditingCardId, delta);
+}
+function copyModalCustomerCode() {
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!card) return;
+  copyTextToClipboard(card.code, `คัดลอกรหัสบัตร ${card.code} เรียบร้อยค่ะ`);
+}
+
+function saveModalCustomerEdit() {
+  const card = memberCards.find(c => c.id === modalEditingCardId);
+  if (!card) return;
+  const newCode = document.getElementById('modalEditCodeInput').value.trim().toUpperCase();
+  const newName = document.getElementById('modalEditNameInput').value.trim();
+  const newPlatform = document.getElementById('modalEditContactPlatform').value;
+  const newContactVal = document.getElementById('modalEditContactValue').value.trim();
+  if (!newName) { showToast('กรุณากรอกชื่อลูกค้าค่ะ'); return; }
+  if (newCode && newCode !== card.code && memberCards.some(c => c.code === newCode)) {
+    showToast('รหัสบัตรนี้ซ้ำกับใบอื่น กรุณาใช้รหัสอื่นค่ะ');
+    return;
+  }
+  if (newCode) card.code = newCode;
+  card.name = newName;
+  card.contactPlatform = newPlatform;
+  card.contactValue = newContactVal;
+  renderAdminCustomerModal();
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  showToast(`บันทึกข้อมูลบัตร ${card.code} เรียบร้อยค่ะ!`);
+}
+
+function previewCustomerCardOnMain() {
+  if (!modalEditingCardId) return;
+  activeCardId = modalEditingCardId;
+  renderLoyaltySection();
+  closeAdminCustomerModal();
+  toggleAdminModal(false);
+  showToast('แสดงบัตรของลูกค้ารายนี้บนหน้าเว็บแล้วค่ะ');
+}
+
+function deleteModalCustomerCard() {
+  if (!modalEditingCardId) return;
+  if (memberCards.length <= 1) { showToast('ต้องมีบัตรสมาชิกอย่างน้อย 1 ใบในระบบค่ะ'); return; }
+  const targetId = modalEditingCardId;
+  closeAdminCustomerModal();
+  deleteMemberCard(targetId);
+}
+
+function renderAdminLoyaltyControls() {
+  document.getElementById('adminTargetPointsInput').value = loyaltyConfig.targetPoints;
+  document.getElementById('adminRewardTitleInput').value = loyaltyConfig.rewardTitle;
+  document.getElementById('adminRewardDescInput').value = loyaltyConfig.rewardDescription;
+  document.getElementById('adminTotalCardsCount').innerText = `${memberCards.length} บัตร`;
+
+  const previewBox = document.getElementById('adminStampPreviewBox');
+  const resetBtn = document.getElementById('resetStampImgBtn');
+  const urlInput = document.getElementById('adminStampUrlInput');
+  if (loyaltyConfig.stampImageUrl && loyaltyConfig.stampImageUrl.trim() !== '') {
+    previewBox.innerHTML = `<img src="${escapeHtml(loyaltyConfig.stampImageUrl)}" class="w-full h-full object-cover" alt="Stamp Preview">`;
+    resetBtn.classList.remove('hidden');
+    urlInput.value = loyaltyConfig.stampImageUrl.startsWith('data:') ? '' : loyaltyConfig.stampImageUrl;
+  } else {
+    previewBox.innerHTML = `<i class="fa-solid fa-heart text-lg"></i>`;
+    resetBtn.classList.add('hidden');
+    urlInput.value = '';
+  }
+
+  const listContainer = document.getElementById('adminMemberCardsList');
+  if (memberCards.length === 0) {
+    listContainer.innerHTML = `<div class="text-xs text-[#8c7872] text-center py-3 bg-white rounded-xl border border-[#ebdcd5]">ยังไม่มีบัตรสะสมแต้มในระบบ</div>`;
+    return;
+  }
+  listContainer.innerHTML = memberCards.map(card => `
+    <div onclick="openAdminCustomerModal(${card.id})" class="bg-white hover:bg-[#fcecf2]/60 p-3 rounded-xl border border-[#ebdcd5] hover:border-[#e07a99] flex items-center justify-between gap-2.5 cursor-pointer transition shadow-sm group">
+      <div class="flex items-center gap-2.5 min-w-0 flex-1">
+        <span class="w-9 h-9 rounded-xl bg-[#fcecf2] border border-[#f2cbdb] text-[#d46a84] text-sm flex items-center justify-center overflow-hidden shrink-0">${avatarInnerHtml(card)}</span>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="text-[10px] bg-[#e07a99] text-white px-2 py-0.5 rounded-full font-bold">${escapeHtml(card.code)}</span>
+            <span class="text-xs sm:text-sm font-bold text-[#4a3b32] group-hover:text-[#d46a84] truncate">${escapeHtml(card.name)}</span>
+          </div>
+          <div class="text-[10px] text-[#8c7872] mt-0.5">ติดต่อ: <span class="font-bold text-[#d46a84]">${card.contactValue ? `${escapeHtml(card.contactPlatform)} (${escapeHtml(card.contactValue)})` : '-'}</span></div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <div class="text-right">
+          <div class="text-xs font-bold text-[#d46a84]">${card.points} <span class="text-[10px] text-[#8c7872]">/ ${loyaltyConfig.targetPoints} แต้ม</span></div>
+          <div class="text-[9px] text-[#8c7872]">ประวัติ ${(card.history || []).length} รายการ</div>
+        </div>
+        <span class="w-8 h-8 rounded-full bg-[#fcecf2] group-hover:bg-[#e07a99] text-[#4a3b32] group-hover:text-white border border-[#ebdcd5] flex items-center justify-center transition"><i class="fa-solid fa-chevron-right text-xs"></i></span>
+      </div>
+    </div>`).join('');
+}
+
+function handleStampImageUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    loyaltyConfig.stampImageUrl = e.target.result;
+    renderLoyaltySection();
+    renderAdminLoyaltyControls();
+    showToast('อัปโหลดรูปภาพแสตมป์เรียบร้อยค่ะ!');
+  };
+  reader.readAsDataURL(file);
+}
+function resetStampImage() {
+  loyaltyConfig.stampImageUrl = "";
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  showToast('เปลี่ยนกลับเป็นแสตมป์ไอคอนหัวใจเริ่มต้นแล้วค่ะ');
+}
+
+function updateLoyaltyConfigFromAdmin() {
+  const targetVal = parseInt(document.getElementById('adminTargetPointsInput').value, 10);
+  const titleVal = document.getElementById('adminRewardTitleInput').value.trim();
+  const descVal = document.getElementById('adminRewardDescInput').value.trim();
+  const stampUrlVal = document.getElementById('adminStampUrlInput').value.trim();
+  if (!isNaN(targetVal) && targetVal >= 1 && targetVal <= 30) {
+    loyaltyConfig.targetPoints = targetVal;
+  } else {
+    showToast('กรุณากำหนดจำนวนแต้มระหว่าง 1 - 30 แต้มค่ะ');
+    return;
+  }
+  if (titleVal) loyaltyConfig.rewardTitle = titleVal;
+  if (descVal) loyaltyConfig.rewardDescription = descVal;
+  if (stampUrlVal) loyaltyConfig.stampImageUrl = stampUrlVal;
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  showToast(`บันทึกเป้าหมาย ${loyaltyConfig.targetPoints} แต้ม แสตมป์ และของรางวัลเรียบร้อยค่ะ`);
+}
+
+function issueNewMemberCard() {
+  const nameInput = document.getElementById('newCardNameInput');
+  const pointsInput = document.getElementById('newCardInitialPointsInput');
+  const codeInput = document.getElementById('newCardCodeInput');
+  const contactPlatformInput = document.getElementById('newCardContactPlatformInput');
+  const contactValueInput = document.getElementById('newCardContactValueInput');
+
+  const name = nameInput.value.trim();
+  if (!name) { showToast('กรุณากรอกชื่อลูกค้าก่อนออกบัตรค่ะ'); return; }
+  let initPoints = parseInt(pointsInput.value, 10);
+  if (isNaN(initPoints) || initPoints < 0) initPoints = 0;
+
+  let code = codeInput.value.trim().toUpperCase();
+  if (!code) {
+    code = `INR-${String(memberCards.length + 1).padStart(3, '0')}`;
+    while (memberCards.some(c => c.code === code)) code = `INR-${Math.floor(100 + Math.random() * 900)}`;
+  } else if (memberCards.some(c => c.code === code)) {
+    showToast('รหัสบัตรนี้มีอยู่ในระบบแล้ว กรุณาใช้รหัสอื่นค่ะ');
+    return;
+  }
+
+  const newCard = {
+    id: Date.now(), code: code, name: name,
+    contactPlatform: contactPlatformInput.value, contactValue: contactValueInput.value.trim(),
+    points: initPoints, redeemedCount: 0, avatar: { type: 'icon', value: 'fa-heart' }, history: []
+  };
+  recordCardHistory(newCard, 'issue', `+${initPoints} แต้ม`, 'แอดมินออกบัตรสมาชิกใหม่');
+  memberCards.push(newCard);
+  activeCardId = newCard.id;
+
+  nameInput.value = '';
+  codeInput.value = '';
+  contactValueInput.value = '';
+  pointsInput.value = '1';
+
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  showToast(`ออกบัตร ${newCard.code} ให้คุณ ${newCard.name} เรียบร้อยค่ะ!`);
+  openAdminCustomerModal(newCard.id);
+}
+
+function adjustCardPoints(cardId, delta) {
+  const card = memberCards.find(c => c.id === cardId);
+  if (!card) return;
+  if (delta < 0 && card.points === 0) { showToast('แต้มสะสมเป็น 0 แล้ว ไม่สามารถลดได้อีกค่ะ'); return; }
+  card.points = Math.max(0, card.points + delta);
+  activeCardId = card.id;
+  if (delta > 0) recordCardHistory(card, 'add', `+${delta} แต้ม`, 'แอดมินประทับตราเพิ่มแต้ม');
+  else recordCardHistory(card, 'subtract', `${delta} แต้ม`, 'แอดมินหัก/ลดแต้มสะสม');
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  if (modalEditingCardId === card.id) renderAdminCustomerModal();
+  if (delta > 0) showToast(`ประทับตรา +1 แต้มให้ ${card.name} (รวม ${card.points}/${loyaltyConfig.targetPoints} แต้ม)`);
+  else showToast(`ลด 1 แต้มของ ${card.name} (เหลือ ${card.points}/${loyaltyConfig.targetPoints} แต้ม)`);
+}
+
+function deleteMemberCard(cardId) {
+  if (memberCards.length <= 1) { showToast('ต้องมีบัตรสมาชิกอย่างน้อย 1 ใบในระบบค่ะ'); return; }
+  memberCards = memberCards.filter(c => c.id !== cardId);
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  showToast('ลบบัตรสมาชิกเรียบร้อยค่ะ');
+}
+
+/* ---------- Utilities ---------- */
+function copyTextToClipboard(text, successMsg) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => showToast(successMsg)).catch(() => fallbackCopyText(text, successMsg));
+  } else {
+    fallbackCopyText(text, successMsg);
+  }
+}
+function fallbackCopyText(text, successMsg) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.left = "-999999px";
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); showToast(successMsg); }
+  catch (err) { showToast('ไม่สามารถคัดลอกได้ กรุณาคัดลอกด้วยตนเอง'); }
+  document.body.removeChild(ta);
+}
+function initAdminShopInfoInputs() {
+  document.getElementById('adminDescInput').value = shopDesc;
+  document.getElementById('adminStatusInput').value = shopStatusText;
+  document.getElementById('adminTagsInput').value = shopTagsText;
+}
+function updateShopInfoFromAdmin() {
+  const desc = document.getElementById('adminDescInput').value.trim();
+  const status = document.getElementById('adminStatusInput').value.trim();
+  const tags = document.getElementById('adminTagsInput').value.trim();
+  if (desc) { shopDesc = desc; document.getElementById('shopDescriptionText').innerText = shopDesc; }
+  if (status) {
+    shopStatusText = status;
+    document.getElementById('shopStatusBadge').innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-[#d46a84] inline-block mr-1.5 animate-ping"></span> ${escapeHtml(shopStatusText)}`;
+  }
+  if (tags) { shopTagsText = tags; document.getElementById('shopTagsBadge').innerText = shopTagsText; }
+  showToast('อัปเดตข้อมูลระบบเรียบร้อย');
+}
+function renderContactLinksUI() {
+  const custContainer = document.getElementById('custContactContainer');
+  if (contactLinks.length === 0) {
+    custContainer.innerHTML = `<span class="text-[10px] text-[#8c7872]">- ยังไม่มีช่องทางติดต่อ -</span>`;
+  } else {
+    custContainer.innerHTML = contactLinks.map(item => `
+      <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener" class="w-7 h-7 rounded-full bg-[#fcecf2] border border-[#ebdcd5] hover:bg-[#e07a99] hover:text-white hover:scale-110 flex items-center justify-center text-[#4a3b32] transition text-xs shadow-sm" title="${escapeHtml(item.label)}">
+        <i class="${item.icon}"></i>
+      </a>`).join('');
+  }
+  const adminContainer = document.getElementById('adminContactList');
+  if (contactLinks.length === 0) {
+    adminContainer.innerHTML = `<div class="text-[11px] text-[#8c7872] text-center py-2">ไม่มีช่องทางติดต่อในระบบ</div>`;
+  } else {
+    adminContainer.innerHTML = contactLinks.map(item => `
+      <div class="flex items-center space-x-2 bg-white p-2 rounded-xl border border-[#ebdcd5]">
+        <span class="w-28 text-[11px] text-[#4a3b32] font-bold flex items-center space-x-1.5 truncate"><i class="${item.icon} text-[#d46a84] w-4"></i><span class="truncate">${escapeHtml(item.label)}</span></span>
+        <input type="text" value="${escapeHtml(item.url)}" onchange="updateContactUrl(${item.id}, this.value)" placeholder="ลิงก์ติดต่อ..." class="flex-1 bg-[#fcf9f5] border border-[#ebdcd5] rounded-lg p-1.5 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+        <button onclick="removeContactChannel(${item.id})" class="px-2.5 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg transition border border-[#ebdcd5]"><i class="fa-solid fa-trash text-[10px]"></i></button>
+      </div>`).join('');
+  }
+}
+function updateContactUrl(id, newUrl) {
+  const item = contactLinks.find(c => c.id === id);
+  if (item) { item.url = newUrl.trim() || '#'; renderContactLinksUI(); showToast(`อัปเดตลิงก์ ${item.label} สำเร็จ`); }
+}
+function addContactChannel() {
+  const platformKey = document.getElementById('newContactPlatform').value;
+  const urlInput = document.getElementById('newContactUrl').value.trim();
+  if (!urlInput) { showToast('กรุณากรอกลิงก์ติดต่อ'); return; }
+  const meta = platformMeta[platformKey] || platformMeta['other'];
+  contactLinks.push({ id: Date.now(), platform: platformKey, label: meta.label, url: urlInput, icon: meta.icon });
+  document.getElementById('newContactUrl').value = '';
+  renderContactLinksUI();
+  showToast(`เพิ่มช่องทาง ${meta.label} เรียบร้อย`);
+}
+function removeContactChannel(id) {
+  contactLinks = contactLinks.filter(c => c.id !== id);
+  renderContactLinksUI();
+  showToast('ลบช่องทางติดต่อสำเร็จ');
+}
+function handleLogoFileUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const avatarContainer = document.querySelector('.group.shrink-0 > div.w-16');
+    avatarContainer.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-cover rounded-full" />`;
+    showToast('อัปเดตโลโก้เรียบร้อย');
+  };
+  reader.readAsDataURL(file);
+}
+function handleBannerFileUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    bannerUrl = e.target.result;
+    renderAdminBannerControls();
+    showToast('อัปเดตแบนเนอร์เรียบร้อย');
+  };
+  reader.readAsDataURL(file);
+}
+function updateLogoFromAdmin() {
+  const url = document.getElementById('adminLogoInput').value.trim();
+  const avatarContainer = document.querySelector('.group.shrink-0 > div.w-16');
+  if (!url) { showToast('กรุณากรอก URL โลโก้'); return; }
+  avatarContainer.innerHTML = `<img src="${escapeHtml(url)}" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; showToast('ไม่สามารถโหลดรูปโลโก้นี้ได้');" />`;
+  showToast('อัปเดตรูปโลโก้เรียบร้อย');
+}
+function renderAdminBannerControls() {
+  const container = document.getElementById('adminBannerControl');
+  const bannerContainer = document.getElementById('bannerContainer');
+  const bannerImg = document.getElementById('shopBannerImg');
+  if (bannerUrl) {
+    bannerContainer.classList.remove('hidden');
+    bannerImg.src = bannerUrl;
+    container.innerHTML = `
+      <div class="space-y-2">
+        <label class="w-full flex items-center justify-center space-x-2 bg-white hover:bg-pink-50 border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] cursor-pointer transition shadow-sm font-bold">
+          <i class="fa-solid fa-upload text-[#d46a84]"></i><span>อัปโหลดแบนเนอร์ใหม่</span>
+          <input type="file" id="adminBannerFileInput" accept="image/*" onchange="handleBannerFileUpload(event)" class="hidden">
+        </label>
+        <div class="flex items-center space-x-2">
+          <input type="text" id="adminBannerInput" value="${bannerUrl.startsWith('data:') ? 'รูปอัปโหลดในเครื่อง' : escapeHtml(bannerUrl)}" placeholder="หรือวาง URL รูป..." class="w-full bg-white border border-[#ebdcd5] rounded-xl p-2 text-xs text-[#4a3b32] focus:outline-none focus:border-[#e07a99]">
+          <button onclick="updateBannerUrlFromInput()" class="princess-btn text-xs px-3 py-1.5 font-bold">แก้ไข</button>
+        </div>
+        <button onclick="removeBanner()" class="w-full px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-xl text-xs font-bold transition border border-[#ebdcd5] flex items-center justify-center space-x-1.5">
+          <i class="fa-solid fa-trash text-[10px]"></i><span>ลบแบนเนอร์</span>
+        </button>
+      </div>`;
+  } else {
+    bannerContainer.classList.add('hidden');
+    container.innerHTML = `
+      <div class="space-y-2">
+        <label class="w-full flex items-center justify-center space-x-2 bg-[#fcecf2] hover:bg-pink-100 text-[#4a3b32] border border-[#ebdcd5] rounded-xl p-2.5 text-xs font-bold cursor-pointer transition">
+          <i class="fa-solid fa-upload text-[10px] text-[#d46a84]"></i><span>+ เพิ่มแบนเนอร์</span>
+          <input type="file" id="adminBannerFileInput" accept="image/*" onchange="handleBannerFileUpload(event)" class="hidden">
+        </label>
+      </div>`;
+  }
+}
+function updateBannerUrlFromInput() {
+  const inputVal = document.getElementById('adminBannerInput').value.trim();
+  if (!inputVal) { removeBanner(); return; }
+  if (inputVal === 'รูปอัปโหลดในเครื่อง') return;
+  bannerUrl = inputVal;
+  renderAdminBannerControls();
+  showToast('อัปเดต URL แบนเนอร์สำเร็จ');
+}
+function removeBanner() {
+  bannerUrl = null;
+  renderAdminBannerControls();
+  showToast('ลบรูปแบนเนอร์ออกเรียบร้อย');
+}
+function toggleAdminModal(show) {
+  document.getElementById('adminModal').classList.toggle('hidden', !show);
+}
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'fixed bottom-5 right-5 bg-[#4a3b32] text-white border border-[#f2cbdb] px-4 py-3 rounded-2xl shadow-xl z-[70] text-xs font-serif font-bold animate-bounce';
+  toast.innerText = `[EDITORIAL]: ${message}`;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 3500);
+}
+function escapeHtml(text) {
+  return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+window.onload = function() {
+  renderLoyaltySection();
+  renderAdminLoyaltyControls();
+  renderAdminBannerControls();
+  renderContactLinksUI();
+  initAdminShopInfoInputs();
+};
+</script>
+</body>
+</html>
